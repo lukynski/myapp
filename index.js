@@ -1,3 +1,4 @@
+var port = process.env.PORT || 1337;
 var express = require('express');
 var app = express();
 
@@ -5,6 +6,6 @@ app.get('/', function (req, res) {
   res.send('Hello World! edited by visualstudio.code');
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log("Server running at http://localhost:%d", port);
 });
